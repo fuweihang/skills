@@ -26,13 +26,11 @@ skills/
 npx skills add . --list
 ```
 
-## 发布后安装
-
-将仓库推送到 GitHub 后，把 `<owner>/skills` 替换为实际仓库：
+## 安装
 
 ```bash
-npx skills add <owner>/skills --list
-npx skills add <owner>/skills --skill develop-fastapi-endpoint -a codex -g
+npx skills add fuweihang/skills --list
+npx skills add fuweihang/skills --skill develop-fastapi-endpoint -a codex -g
 ```
 
 去掉 `-g` 可安装到当前项目；增加 `-y` 可跳过交互确认。
