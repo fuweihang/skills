@@ -6,6 +6,7 @@
 
 - `develop-fastapi-endpoint`：按目标项目约定设计、实现、重构和审查生产级 FastAPI 接口。
 - `docs-cleanup`：在开发阶段结束后清理项目文档，保留可长期复用的当前状态、架构、决策、约束和待办。
+- `plan-gate`：在实施前审核指定方案的项目一致性、职责边界、完整性、MVP 和可执行性，通过后方可进入实施。
 - `plan-split`：在实施前检查方案规模，并将过大的方案拆成可独立执行和验证的顺序任务。
 
 ## 仓库结构
@@ -19,6 +20,9 @@ skills/
 │       ├── architecture.md
 │       └── review-checklist.md
 ├── docs-cleanup/
+│   ├── SKILL.md
+│   └── agents/openai.yaml
+├── plan-gate/
 │   ├── SKILL.md
 │   └── agents/openai.yaml
 └── plan-split/
