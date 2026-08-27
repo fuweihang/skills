@@ -4,6 +4,7 @@
 
 ## 当前 skills
 
+- `code-explain`：通过追踪运行时代码、测试、类型和执行流程，解释已实现功能的工作原理。
 - `develop-fastapi-endpoint`：按目标项目约定设计、实现、重构和审查生产级 FastAPI 接口。
 - `docs-cleanup`：在开发阶段结束后清理项目文档，保留可长期复用的当前状态、架构、决策、约束和待办。
 - `plan-gate`：在实施前审核指定方案的项目一致性、职责边界、完整性、MVP 和可执行性，通过后方可进入实施。
@@ -13,6 +14,9 @@
 
 ```text
 skills/
+├── code-explain/
+│   ├── SKILL.md
+│   └── agents/openai.yaml
 ├── develop-fastapi-endpoint/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
