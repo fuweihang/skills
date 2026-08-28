@@ -6,7 +6,7 @@
 
 - `code-explain`：通过追踪运行时代码、测试、类型和执行流程，解释已实现功能的工作原理。
 - `code-review`：对指定代码变更进行只读审查，并基于仓库证据报告实际工程问题。
-- `develop-fastapi-endpoint`：按目标项目约定设计、实现、重构和审查生产级 FastAPI 接口。
+- `develop-fastapi`：按目标项目约定设计、实现或重构生产级 FastAPI 接口。
 - `docs-cleanup`：在开发阶段结束后清理项目文档，保留可长期复用的当前状态、架构、决策、约束和待办。
 - `plan-gate`：在实施前审核指定方案的项目一致性、职责边界、完整性、MVP 和可执行性，通过后方可进入实施。
 - `plan-split`：在实施前检查方案规模，并将过大的方案拆成可独立执行和验证的顺序任务。
@@ -23,7 +23,7 @@ skills/
 │   ├── agents/openai.yaml
 │   └── references/
 │       └── review-checklist.md
-├── develop-fastapi-endpoint/
+├── develop-fastapi/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   └── references/
@@ -41,6 +41,23 @@ skills/
 ```
 
 后续能力继续添加到 `skills/<skill-name>/`，每个目录必须包含带 `name` 和 `description` frontmatter 的 `SKILL.md`。
+
+## 推荐使用顺序
+
+这些 skills 按任务需要独立调用，不要求每次全部执行。常见开发流程是：
+
+```text
+plan-split（方案过大时）
+→ plan-gate（实施前审核方案）
+→ develop-fastapi（仅 FastAPI 开发任务）
+→ code-review（变更完成后只读评审）
+→ code-explain（需要理解实现时）
+→ docs-cleanup（阶段结束后整理文档）
+```
+
+- `code-review`、`code-explain`、`plan-gate` 和 `docs-cleanup` 默认需要显式调用。
+- `plan-split` 默认只在回复中给出拆分结果；只有用户明确要求时才创建任务文档。
+- `plan-gate` 审核通过后不会自动实施代码，后续修改仍以用户任务为准。
 
 ## 本地检查
 
